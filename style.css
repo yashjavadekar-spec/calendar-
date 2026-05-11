@@ -39,3 +39,6 @@ button:hover{
 background-color:#00bfff;
 color:white;
 }
+tr{
+   height:50px;
+}
