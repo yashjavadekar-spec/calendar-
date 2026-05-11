@@ -1,25 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Calendar Cover</title>
-<link rel="stylesheet" href="123.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar Front Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+    }
+
+    .calendar-card{
+      width:320px;
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,0.3);
+      text-align:center;
+      transition:0.4s;
+    }
+
+    .calendar-card:hover{
+      transform:scale(1.03);
+    }
+
+    .top{
+      background:#ff4b5c;
+      color:white;
+      padding:30px 20px;
+    }
+
+    .day{
+      font-size:28px;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    .date{
+      font-size:80px;
+      font-weight:bold;
+      margin:10px 0;
+    }
+
+    .month{
+      font-size:24px;
+      letter-spacing:1px;
+    }
+
+    .bottom{
+      padding:25px;
+    }
+
+    .year{
+      font-size:22px;
+      color:#444;
+      margin-bottom:20px;
+    }
+
+    button{
+      padding:12px 25px;
+      border:none;
+      border-radius:30px;
+      background:#1e3c72;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#ff4b5c;
+      transform:translateY(-2px);
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="cover">
-    <div class="content">
-        <h1>2026</h1>
-        <h2>My Calendar</h2>
-        <br>
-        <p>Plan • Organize • Achieve</p>
-    </div>
-<Br><br>
-   <a href="calender jan.html"><button>'let`s go to calender of 
-    2026'
-   </button></a> 
-</div>
+  <div class="calendar-card">
 
+    <div class="top">
+      <div class="day" id="day">MONDAY</div>
+      <div class="date" id="date">11</div>
+      <div class="month" id="month">MAY</div>
+    </div>
+
+    <div class="bottom">
+      <div class="year" id="year">2026</div>
+
+      <button onclick="alert('Welcome to Calendar!')">
+        Open Calendar
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    const today = new Date();
+
+    const days = [
+      "SUNDAY","MONDAY","TUESDAY",
+      "WEDNESDAY","THURSDAY",
+      "FRIDAY","SATURDAY"
+    ];
+
+    const months = [
+      "JANUARY","FEBRUARY","MARCH",
+      "APRIL","MAY","JUNE",
+      "JULY","AUGUST","SEPTEMBER",
+      "OCTOBER","NOVEMBER","DECEMBER"
+    ];
+
+    document.getElementById("day").innerHTML =
+      days[today.getDay()];
+
+    document.getElementById("date").innerHTML =
+      today.getDate();
+
+    document.getElementById("month").innerHTML =
+      months[today.getMonth()];
+
+    document.getElementById("year").innerHTML =
+      today.getFullYear();
+  </script>
 
 </body>
 </html>
+
