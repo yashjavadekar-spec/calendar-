@@ -32,8 +32,9 @@ text-align:center;
 font-family:Algerian, Helvetica, sans-serif;
 }
 button{
+   margin-top:16px;
     position: relative;
-    padding: 50px 90px;
+    padding: 35px 35px;
     border: none;
     outline: none;
     border-radius: 50px;
