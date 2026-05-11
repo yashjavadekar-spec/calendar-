@@ -9,7 +9,7 @@ h1{
 font-family: Algerian, Helvetica, sans-serif;
 font-size:90px;
 text-align:center;
-background-color:#737373;
+ background: linear-gradient(135deg,white,gray,black);
 padding:0px;
 
    height:100px;
